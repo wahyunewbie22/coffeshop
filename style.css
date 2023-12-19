@@ -1,0 +1,371 @@
+:root {
+  --primary: #b6895b;
+  --bg: #010101;
+}
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "poppins", sans-serif;
+  background-color: var(--bg);
+  color: white;
+  margin: 0 1rem;
+  margin: 0;
+  min-height: 2000px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 5%;
+  background-color: rgba(1, 1, 1, 0.7);
+  border-bottom: 1px solid #583b1e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+.navbar .navbar-nav a::after {
+  content: " ";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.5s linear;
+}
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+.navbar .navbar-ekstra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+.navbar .navbar-ekstra a:hover {
+  color: var(--primary);
+}
+#menu {
+  display: none;
+}
+/* hero section */
+.hero {
+  min-height: 100vh;
+  align-items: center;
+  display: flex;
+  background-image: url(img/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 10%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+.hero .content {
+  padding: 1.4rem 6%;
+  max-width: 60rem;
+}
+.hero .content h1 {
+  font-size: 5em;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 5px 5px 10px black;
+}
+.hero .content span {
+  color: var(--primary);
+}
+.hero .content p {
+  margin-top: 10px;
+  font-size: 1.4em;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #fff;
+}
+.hero .content .cta {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background: var(--primary);
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+/* about section */
+.about, .menuKami, .contact{
+  padding: 5rem 4% 1.4rem;
+  min-height: 100vh;
+}
+.about h2, .menuKami h2, .contact h2{
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+.about h2 span, .menuKami span, .contact span {
+  color: var(--primary);
+}
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img .img {
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px var(--primary);
+}
+.content {
+  width: 50%;
+}
+.content h3 {
+  font-size: 30px;
+  text-align: center;
+  color: var(--primary);
+}
+.content p {
+  text-align: justify;
+  font-weight: 200;
+}
+/* menu secion */
+.menuKami h2{
+  margin-bottom: 1rem;
+}
+.menuKami p {
+  width: 30rem;
+  text-align: center;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.2;
+}
+.menuKami .row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  justify-content: center;
+}
+.menuKami .row .menu-card{
+ text-align: center;
+ padding-bottom: 2rem;
+
+}
+.menuKami .row .menu-card img{
+  border-radius: 50%;
+  width: 50%;
+}
+.menuKami .row .menu-card-title{
+  margin-top: 1rem;
+}
+.menuKami .row .menu-card-harga{
+  width: 100%;
+}
+/* kontak */
+.contact p {
+  width: 30rem;
+  text-align: center;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+
+}
+.contact .row{
+  display: flex;
+  background-color: #222;
+  width: 100%;
+}
+.contact .row .maps{
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+
+}
+.contact .row form{
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.contact .row form .input-group{
+display: flex;
+align-items: center;
+margin-top: 2rem;
+background-color: var(--bg);
+border: 1px solid #eee;
+padding-left: 2rem;
+
+}
+.contact .row form .input-group input{
+  color:#eaeaea;
+  background: none;
+  font-size: 1.7rem;
+  padding: 0.5rem 2rem;
+}
+.contact .row form button{
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  background: var(--primary);
+  color: #eaeaea;
+}
+/* footer */
+footer{
+  background: var(--primary);
+  margin-top: 10rem;
+  text-align: center;
+  padding: 1rem 0 2rem;
+}
+footer .socials a{
+  color: #eaeaea;
+  transition: all 0.5s;
+}
+footer .links{
+  margin-bottom: 1.4rem;
+}
+footer .links a{
+  color: #eaeaea;
+  font-size: 1.5rem;
+  padding: 0 0.7rem;
+  transition: all 0.5s;
+}
+footer .socials a:hover, footer .links a:hover{
+  color: var(--bg);
+}
+footer .credit{
+  font-size: 0.8rem;
+}
+footer .credit a{
+  color: var(--bg);
+  font-weight: 400;
+}
+.about .row @media only screen and (max-width: 1366px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  html {
+    font-size: 50%;
+  }
+  #menu {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: rgba(1, 1, 1, 0.3);
+    width: 25rem;
+    height: 100vh;
+    transition: 0.5s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    text-align: center;
+    color: #fff;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .about .row {
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .about .row .about-img{
+    width: 100%;
+  }
+  .about .row .about-img .img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .about .row .content {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .about .row .content h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    
+  }
+  .about .row .content p {
+    font-size: 2rem;
+  }
+  .menuKami p, .menuKami h3{
+    font-size: 14px;
+  }
+  .contact .row{
+    flex-wrap: wrap;
+  }
+  .contact .row .maps{
+    height: 30rem;
+  }
+  .contact .row form{
+    padding-top: 0;
+    padding-bottom: 1rem;
+  }
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 40%;
+  }
+  .about .row .about-img{
+    width: 100%;
+  }
+  .about .row .about-img .img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .about .row .content{
+    margin-top: 75px;
+  }
+  .about .row .content h3{
+    font-size: 20px;
+  }
+  .about .row .content p {
+    font-size: 14px;
+  }
+  .menuKami p, .menuKami h3{
+  font-size: 10px;
+}
